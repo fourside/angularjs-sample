@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const del = require('del');
+const babel = require('gulp-babel');
 const runSequence = require('run-sequence');
 
 gulp.task('default', ['build']);
@@ -13,15 +14,17 @@ gulp.task('build', () => {
 });
 
 gulp.task('clean', () => {
-  del('dist/**/*');
+  return del('dist/**/*');
 });
 
 gulp.task('build:js', () => {
   return gulp.src([
     './src/main.js',
     './src/**/*.js',
-  ]).pipe(concat('bundle.js'))
-  .pipe(gulp.dest('./dist/js'));
+  ])
+    .pipe(babel())
+    .pipe(concat('bundle.js'))
+    .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('build:html', () => {
