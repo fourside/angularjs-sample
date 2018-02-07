@@ -3,12 +3,14 @@ const concat = require('gulp-concat');
 const del = require('del');
 const babel = require('gulp-babel');
 const runSequence = require('run-sequence');
+const templateCache = require('gulp-angular-templatecache');
 
 gulp.task('default', ['build']);
 
 gulp.task('build', () => {
   runSequence(
     'clean',
+    'build:template',
     ['build:js', 'build:vendor', 'build:html', 'build:css']
   )
 });
@@ -21,10 +23,19 @@ gulp.task('build:js', () => {
   return gulp.src([
     './src/main.js',
     './src/**/*.js',
+    './tmp/*.js'
   ])
     .pipe(babel())
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('build:template', () => {
+  return gulp.src([
+    './src/template/*.html',
+  ])
+    .pipe(templateCache({module: 'app'}))
+    .pipe(gulp.dest('./tmp'));
 });
 
 gulp.task('build:html', () => {
@@ -43,7 +54,8 @@ gulp.task('build:css', () => {
 gulp.task('build:vendor', () => {
   return gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
-    './node_modules/angular/angular.min.js',
+    //'./node_modules/angular/angular.min.js',
+    './node_modules/angular/angular.js',
     './node_modules/angular-resource/angular-resource.min.js',
     './node_modules/angular-route/angular-route.min.js',
     './node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
