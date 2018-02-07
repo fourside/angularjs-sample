@@ -4,7 +4,7 @@ const del = require('del');
 const runSequence = require('run-sequence');
 
 gulp.task('default', ['build']);
-gulp.task('build', ['clean', 'build:js', 'build:vendor', 'build:html', 'build:css']);
+
 gulp.task('build', () => {
   runSequence(
     'clean',
