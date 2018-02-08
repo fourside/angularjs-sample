@@ -22,8 +22,8 @@ gulp.task('clean', () => {
 gulp.task('build:js', () => {
   return gulp.src([
     './src/js/main.js',
-    './tmp/*.js',
     './src/js/**/*js',
+    './tmp/*.js',
   ])
     .pipe(babel())
     .pipe(concat('bundle.js'))

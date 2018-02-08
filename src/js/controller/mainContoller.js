@@ -1,6 +1,6 @@
 
 class MainController {
-  constructor($templateCache) {
+  constructor() {
     this.message = 'hello world';
   }
 
@@ -9,10 +9,8 @@ class MainController {
   }
 }
 
-const app = angular.module(app);
-app.component('myApp', {
+angular.module('app').component('myApp', {
   templateUrl: 'main.html',
   controller: MainController,
   controllerAs: 'main'
 });
-angular.bootstrap(document.body, [app.name]);
