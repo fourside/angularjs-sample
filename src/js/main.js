@@ -1,22 +1,13 @@
 'use strict';
 
-angular.module('app',[
+const app = 'app';
+angular.module(app ,[
   'ngRoute',
   'ngResource',
   'pascalprecht.translate',
   'ui.bootstrap',
 ])
-.config(($locationProvider, $routeProvider) => {
+.config(($locationProvider) => {
   $locationProvider.hashPrefix('');
-  $routeProvider
-  .when('/', {
-    templateUrl: 'main.html',
-    controller: 'MainController',
-    controllerAs: 'main'
-  })
-  .otherwise({
-    redirectTo: '/'
-  })
-  ;
 })
 ;

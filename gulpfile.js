@@ -21,9 +21,9 @@ gulp.task('clean', () => {
 
 gulp.task('build:js', () => {
   return gulp.src([
-    './src/main.js',
-    './src/**/*.js',
-    './tmp/*.js'
+    './src/js/main.js',
+    './tmp/*.js',
+    './src/js/**/*js',
   ])
     .pipe(babel())
     .pipe(concat('bundle.js'))
@@ -53,13 +53,13 @@ gulp.task('build:css', () => {
 
 gulp.task('build:vendor', () => {
   return gulp.src([
-    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/jquery/dist/jquery.js',
     //'./node_modules/angular/angular.min.js',
     './node_modules/angular/angular.js',
-    './node_modules/angular-resource/angular-resource.min.js',
-    './node_modules/angular-route/angular-route.min.js',
+    './node_modules/angular-resource/angular-resource.js',
+    './node_modules/angular-route/angular-route.js',
     './node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
-    './node_modules/angular-translate/dist/angular-translate.min.js',
+    './node_modules/angular-translate/dist/angular-translate.js',
   ]).pipe(concat('vendor.js'))
   .pipe(gulp.dest('./dist/js'));
 });
