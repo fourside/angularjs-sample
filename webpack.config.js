@@ -11,7 +11,7 @@ module.exports = {
       'angular',
       'bootstrap',
       'angular-route',
-      //'angular-resource',
+      'angular-resource',
       //'angular-translate',
       //'angular-ui-bootstrap'
     ]

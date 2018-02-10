@@ -4,11 +4,13 @@ import angular from 'angular';
 import MainController from './controller/mainController';
 import HeaderController from './controller/headerController';
 import FooterController from './controller/footerController';
+import HttpService from './service/http.service';
 
 import routing from './app.config';
 
 angular.module('app' ,[
-  'ngRoute'
+  'ngRoute',
+  'ngResource'
 ])
 .config(routing)
 .component('myMain', {
@@ -26,5 +28,6 @@ angular.module('app' ,[
   controller: FooterController,
   controllerAs: 'footer'
 })
+.service('httpService', HttpService)
 ;
 
