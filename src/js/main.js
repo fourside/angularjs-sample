@@ -1,10 +1,14 @@
 import angular from 'angular';
-import MainController from './controller/mainController'
-import HeaderController from './controller/headerController'
-import FooterController from './controller/footerController'
+import MainController from './controller/mainController';
+import HeaderController from './controller/headerController';
+import FooterController from './controller/footerController';
+
+import routing from './app.config';
 
 angular.module('app' ,[
+  'ngRoute'
 ])
+.config(routing)
 .component('myMain', {
   template: require('../template/main.html'),
   controller: MainController,
