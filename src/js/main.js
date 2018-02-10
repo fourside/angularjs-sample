@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.css';
+
 import angular from 'angular';
 import MainController from './controller/mainController';
 import HeaderController from './controller/headerController';

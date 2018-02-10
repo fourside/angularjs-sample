@@ -1,6 +1,15 @@
-<h2>login</h2>
-<form>
-  <input type="text" name="mail">
-  <input type="text" name="password">
-  <input type="submit" value="send">
+<form name="loginForm" class="login-form">
+  <h2>login</h2>
+  <div class="form-group">
+    <label for="mail">Mail</label>
+    <input class="form-control" type="email" name="mail" id="mail" ng-model="login.mail" required>
+    <span class="validation-error" ng-show="loginForm.mail.$error.email">please enter in email format.</span>
+    <span class="validation-error" ng-show="loginForm.mail.$error.required && loginForm.mail.$dirty">please enter your email.</span>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input class="form-control" type="password" name="password" id="password" ng-model="login.password" required>
+    <span class="validation-error" ng-show="loginForm.password.$error.required && loginForm.password.$dirty">please enter password.</span>
+  </div>
+  <button type="submit" class="btn btn-primary" ng-disabled="!loginForm.$valid" ng-click="login.login()">login</button>
 </form>

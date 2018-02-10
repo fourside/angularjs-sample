@@ -6,12 +6,7 @@ body {
     margin: 0;
 }
 header {
-    width: calc(100% - 16px);
-    height: 80px;
     padding: 4px 8px;
-    position: absolute;
-    top: 0;
-    background-color: #ccc;
 }
 main {
     margin-top: 80px;
@@ -24,4 +19,14 @@ footer {
     bottom: 0;
     background-color: #888;
     color: #ddd;
+}
+.login-form {
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.validation-error {
+    color: red;
 }
