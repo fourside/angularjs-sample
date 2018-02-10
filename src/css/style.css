@@ -1,1 +1,27 @@
-
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0;
+}
+header {
+    width: calc(100% - 16px);
+    height: 80px;
+    padding: 4px 8px;
+    position: absolute;
+    top: 0;
+    background-color: #ccc;
+}
+main {
+    margin-top: 80px;
+    padding: 4px 8px;
+}
+footer {
+    width: calc(100% - 16px);
+    padding: 8px;
+    position: absolute;
+    bottom: 0;
+    background-color: #888;
+    color: #ddd;
+}
