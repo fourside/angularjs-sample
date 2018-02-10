@@ -10,13 +10,17 @@ module.exports = {
       'jquery',
       'angular',
       'bootstrap',
+      'angular-route',
       //'angular-resource',
-      //'angular-route',
       //'angular-translate',
       //'angular-ui-bootstrap'
     ]
   },
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+    port: 3000
+  },
   module: {
     rules: [
       {
