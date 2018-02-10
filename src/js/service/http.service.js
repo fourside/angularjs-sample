@@ -1,4 +1,3 @@
-
 export default class HttpService {
   constructor($resource) {
     this.resource = $resource;
@@ -13,7 +12,11 @@ export default class HttpService {
   }
 
   put(path, requestBody, onSuccess, onError) {
-    this.resource(path, {}, {'update': {method: 'PUT'}}).update(requestBody, onSuccess, onError);
+    this.resource(path, {}, { update: { method: 'PUT' } }).update(
+      requestBody,
+      onSuccess,
+      onError
+    );
   }
 
   delete(path, onSuccess, onError) {

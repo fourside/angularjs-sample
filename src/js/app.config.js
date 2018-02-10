@@ -1,5 +1,5 @@
-import LoginController from './controller/loginController'
-import AboutController from './controller/aboutController'
+import LoginController from './controller/loginController';
+import AboutController from './controller/aboutController';
 
 export default function routing($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('');
@@ -16,6 +16,5 @@ export default function routing($locationProvider, $routeProvider) {
     })
     .otherwise({
       redirectTo: '/'
-    })
-  ;
-};
+    });
+}

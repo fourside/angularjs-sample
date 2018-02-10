@@ -8,26 +8,22 @@ import HttpService from './service/http.service';
 
 import routing from './app.config';
 
-angular.module('app' ,[
-  'ngRoute',
-  'ngResource'
-])
-.config(routing)
-.component('myMain', {
-  template: require('../template/main.html'),
-  controller: MainController,
-  controllerAs: 'main'
-})
-.component('myHeader', {
-  template: require('../template/header.html'),
-  controller: HeaderController,
-  controllerAs: 'header'
-})
-.component('myFooter', {
-  template: require('../template/footer.html'),
-  controller: FooterController,
-  controllerAs: 'footer'
-})
-.service('httpService', HttpService)
-;
-
+angular
+  .module('app', ['ngRoute', 'ngResource'])
+  .config(routing)
+  .component('myMain', {
+    template: require('../template/main.html'),
+    controller: MainController,
+    controllerAs: 'main'
+  })
+  .component('myHeader', {
+    template: require('../template/header.html'),
+    controller: HeaderController,
+    controllerAs: 'header'
+  })
+  .component('myFooter', {
+    template: require('../template/footer.html'),
+    controller: FooterController,
+    controllerAs: 'footer'
+  })
+  .service('httpService', HttpService);

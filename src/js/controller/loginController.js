@@ -10,11 +10,15 @@ export default class LoginController {
       mail: this.mail,
       password: this.password
     };
-    this.httpService.post('/api/login', request, ()=> {
-      console.log("yay");
-    },
-    () => {
-      console.log("err");
-    })
+    this.httpService.post(
+      '/api/login',
+      request,
+      () => {
+        console.log('yay');
+      },
+      () => {
+        console.log('err');
+      }
+    );
   }
 }

@@ -1,4 +1,3 @@
 export default class AboutController {
-  constructor() {
-  }
+  constructor() {}
 }
