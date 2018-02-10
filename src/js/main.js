@@ -1,13 +1,11 @@
-'use strict';
+import angular from 'angular';
+import MainController from './controller/mainController'
 
-const app = 'app';
-angular.module(app ,[
-  'ngRoute',
-  'ngResource',
-  'pascalprecht.translate',
-  'ui.bootstrap',
+angular.module('app' ,[
 ])
-.config(($locationProvider) => {
-  $locationProvider.hashPrefix('');
-})
-;
+.component('myMain', {
+  template: require('../template/main.html'),
+  controller: MainController,
+  controllerAs: 'main'
+});
+
