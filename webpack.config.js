@@ -24,6 +24,12 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /\.html$/,
+        loader: 'htmlhint-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
