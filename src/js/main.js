@@ -7,9 +7,10 @@ import FooterController from './controller/footerController';
 import HttpService from './service/http.service';
 
 import routing from './app.config';
+import mockServer from './mock.server';
 
 angular
-  .module('app', ['ngRoute', 'ngResource', 'ui.bootstrap'])
+  .module('app', ['ngRoute', 'ngResource', 'ui.bootstrap', 'ngMockE2E'])
   .config(routing)
   .component('myMain', {
     template: require('../template/main.html'),
@@ -26,4 +27,5 @@ angular
     controller: FooterController,
     controllerAs: 'footer'
   })
-  .service('httpService', HttpService);
+  .service('httpService', HttpService)
+  .run(mockServer);

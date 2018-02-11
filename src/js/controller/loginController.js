@@ -1,9 +1,10 @@
 export default class LoginController {
-  constructor(httpService) {
+  constructor(httpService, $location) {
     this.mail;
     this.password;
     this.httpService = httpService;
     this.alert;
+    this.location = $location;
   }
 
   login() {
@@ -16,7 +17,7 @@ export default class LoginController {
       '/api/login',
       request,
       () => {
-        console.log('yay');
+        this.location.path('/about');
       },
       err => {
         this.alert = { type: 'danger', msg: err };

@@ -17,8 +17,8 @@ header {
     font-size: 2em;
 }
 main {
-    margin-top: 80px;
-    padding: 4px 8px;
+    margin-top: 60px;
+    padding: 0 8px;
 }
 footer {
     width: calc(100% - 16px);

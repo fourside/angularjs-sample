@@ -13,6 +13,7 @@ module.exports = {
       'angular-route',
       'angular-resource',
       'angular-ui-bootstrap',
+      'angular-mocks',
       //'angular-translate',
     ]
   },
