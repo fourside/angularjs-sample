@@ -9,7 +9,7 @@ import HttpService from './service/http.service';
 import routing from './app.config';
 
 angular
-  .module('app', ['ngRoute', 'ngResource'])
+  .module('app', ['ngRoute', 'ngResource', 'ui.bootstrap'])
   .config(routing)
   .component('myMain', {
     template: require('../template/main.html'),

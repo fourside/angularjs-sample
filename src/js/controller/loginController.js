@@ -3,9 +3,11 @@ export default class LoginController {
     this.mail;
     this.password;
     this.httpService = httpService;
+    this.alert;
   }
 
   login() {
+    this.alert = {};
     const request = {
       mail: this.mail,
       password: this.password
@@ -16,7 +18,8 @@ export default class LoginController {
       () => {
         console.log('yay');
       },
-      () => {
+      (err) => {
+        this.alert = { type: 'danger', msg: err};
         console.log('err');
       }
     );

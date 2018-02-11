@@ -12,8 +12,8 @@ module.exports = {
       'bootstrap',
       'angular-route',
       'angular-resource',
+      'angular-ui-bootstrap',
       //'angular-translate',
-      //'angular-ui-bootstrap'
     ]
   },
   devtool: 'inline-source-map',

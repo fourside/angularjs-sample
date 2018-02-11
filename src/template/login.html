@@ -11,5 +11,6 @@
     <input class="form-control" type="password" name="password" id="password" ng-model="login.password" required>
     <span class="validation-error" ng-show="loginForm.password.$error.required && loginForm.password.$dirty">please enter password.</span>
   </div>
+  <div uib-alert ng-class="'alert-' + login.alert.type">{{login.alert.msg}}</div>
   <button type="submit" class="btn btn-primary" ng-disabled="!loginForm.$valid" ng-click="login.login()">login</button>
 </form>
