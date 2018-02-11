@@ -18,8 +18,8 @@ export default class LoginController {
       () => {
         console.log('yay');
       },
-      (err) => {
-        this.alert = { type: 'danger', msg: err};
+      err => {
+        this.alert = { type: 'danger', msg: err };
         console.log('err');
       }
     );
