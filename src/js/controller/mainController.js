@@ -8,7 +8,7 @@ export default class MainController {
       function(newValue) {
         if (!newValue) {
           const path = $location.path();
-          if (path !== '/' || path !== '/error') {
+          if (path !== '/' && path !== '/error') {
             $location.path('/error');
           }
         }
