@@ -8,6 +8,7 @@ import FirstTabController from './controller/firstTabController';
 import SecondTabController from './controller/secondTabController';
 import PeopleListController from './controller/peopleListController';
 import PeopleFormController from './controller/peopleFormController';
+import PaginationController from './controller/paginationController';
 
 import HttpService from './service/http.service';
 import AuthService from './service/auth.service';
@@ -60,6 +61,15 @@ angular
     template: require('../template/secondTab.html'),
     controller: SecondTabController,
     controllerAs: 'secondTab'
+  })
+  .component('pagination', {
+    template: require('../template/pagination.html'),
+    controller: PaginationController,
+    controllerAs: 'pagination',
+    bindings: {
+      totalItems: '<',
+      onChange: '&'
+    }
   })
   .constant('appConst', appConst())
   .service('httpService', HttpService)
