@@ -1,3 +1,5 @@
 export default class SecondTabController {
-  constructor() {}
+  constructor() {
+    this.name = 'second tab';
+  }
 }

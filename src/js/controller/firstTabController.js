@@ -3,7 +3,6 @@ export default class FirstTabController {
     this.httpService = httpService;
     this.people;
     this.getPeople();
-    console.log(this.people);
   }
 
   getPeople() {
