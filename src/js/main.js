@@ -8,6 +8,7 @@ import HttpService from './service/http.service';
 import AuthService from './service/auth.service';
 
 import routing from './app.config';
+import appConst from './app.const';
 import mockServer from './mock.server';
 
 angular
@@ -28,6 +29,7 @@ angular
     controller: FooterController,
     controllerAs: 'footer'
   })
+  .constant('appConst', appConst())
   .service('httpService', HttpService)
   .service('authService', AuthService)
   .run(mockServer);

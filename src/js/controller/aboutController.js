@@ -1,3 +1,5 @@
 export default class AboutController {
-  constructor() {}
+  constructor(appConst) {
+    console.log(appConst.perPage);
+  }
 }

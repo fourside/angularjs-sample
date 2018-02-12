@@ -2,9 +2,9 @@ export default class LoginController {
   constructor(httpService, authService, $location) {
     this.mail;
     this.password;
+    this.alert;
     this.httpService = httpService;
     this.authService = authService;
-    this.alert;
     this.location = $location;
   }
 
