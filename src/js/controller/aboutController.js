@@ -1,5 +1,13 @@
 export default class AboutController {
-  constructor(appConst) {
-    console.log(appConst.perPage);
+  constructor($scope) {
+    this.scope = $scope;
+  }
+
+  initFirstTab() {
+    this.scope.$broadcast('initChildren');
+  }
+
+  alertMe() {
+    console.log('alertMe');
   }
 }
