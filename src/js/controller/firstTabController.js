@@ -1,7 +1,7 @@
 export default class FirstTabController {
   constructor($scope) {
     this.editMode = false;
-    $scope.$on('initChildren', () => {
+    $scope.$on('initFirstTab', () => {
       this.listMode();
     });
   }

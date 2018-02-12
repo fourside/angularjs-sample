@@ -4,10 +4,11 @@ export default class AboutController {
   }
 
   initFirstTab() {
-    this.scope.$broadcast('initChildren');
+    this.scope.$broadcast('initFirstTab');
   }
 
   alertMe() {
     console.log('alertMe');
+    this.scope.$broadcast('initSecondTab');
   }
 }
