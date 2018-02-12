@@ -1,5 +1,3 @@
-import '../../css/style.css';
-
-export default class MainController {
+export default class FooterController {
   constructor() {}
 }
