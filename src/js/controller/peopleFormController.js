@@ -22,6 +22,7 @@ export default class PeopleFormController {
       request,
       data => {
         console.log(data);
+        this.person = undefined;
         this.onList();
       },
       err => {
@@ -41,6 +42,7 @@ export default class PeopleFormController {
       request,
       data => {
         console.log(data);
+        this.person = undefined;
         this.onList();
       },
       err => {
