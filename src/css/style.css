@@ -35,6 +35,13 @@ footer {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+.person-form {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 .login-form h2 {
     margin-top: 0;
 }

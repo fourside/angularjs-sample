@@ -6,6 +6,8 @@ import HeaderController from './controller/headerController';
 import FooterController from './controller/footerController';
 import FirstTabController from './controller/firstTabController';
 import SecondTabController from './controller/secondTabController';
+import PeopleListController from './controller/peopleListController';
+import PeopleFormController from './controller/peopleFormController';
 
 import HttpService from './service/http.service';
 import AuthService from './service/auth.service';
@@ -36,6 +38,23 @@ angular
     template: require('../template/firstTab.html'),
     controller: FirstTabController,
     controllerAs: 'firstTab'
+  })
+  .component('peopleList', {
+    template: require('../template/peopleList.html'),
+    controller: PeopleListController,
+    controllerAs: 'peopleList',
+    bindings: {
+      onEdit: '&'
+    }
+  })
+  .component('peopleForm', {
+    template: require('../template/peopleForm.html'),
+    controller: PeopleFormController,
+    controllerAs: 'peopleForm',
+    bindings: {
+      person: '<',
+      onList: '&'
+    }
   })
   .component('secondTab', {
     template: require('../template/secondTab.html'),

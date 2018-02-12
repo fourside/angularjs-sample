@@ -1,18 +1,15 @@
 export default class FirstTabController {
-  constructor(httpService) {
-    this.httpService = httpService;
-    this.people;
-    this.getPeople();
+  constructor() {
+    this.editMode = false;
   }
 
-  getPeople() {
-    this.httpService.get(
-      '/api/people',
-      data => {
-        console.log(data);
-        this.people = data.people;
-      },
-      () => {}
-    );
+  edit(person) {
+    this.editMode = true;
+    this.person = person;
+  }
+
+  listMode() {
+    this.editMode = false;
+    this.person = undefined;
   }
 }

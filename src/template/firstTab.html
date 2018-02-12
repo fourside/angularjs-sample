@@ -1,21 +1,5 @@
 <h3>First Tab</h3>
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th class="th-icon"></th>
-      <th>id</th>
-      <th>name</th>
-      <th>hash</th>
-      <th class="th-icon"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="person in firstTab.people">
-      <td><a href="" ng-click="edit(person)"><i class="glyphicon glyphicon-pencil"></i></a></td>
-      <td>{{person.id}}</td>
-      <td>{{person.name}}</td>
-      <td>{{person.hash}}</td>
-      <td><a href="" ng-click="delete(person)"><i class="glyphicon glyphicon-trash"></i></a></td>
-    </tr>
-  </tbody>
-</table>
+<div ng-switch="firstTab.editMode">
+  <people-form ng-switch-when="true" on-list="firstTab.listMode()" person="firstTab.person"></people-form>
+  <people-list ng-switch-default on-edit="firstTab.edit(person)"></people-list>
+</div>
