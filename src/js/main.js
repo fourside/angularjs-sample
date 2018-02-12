@@ -5,6 +5,7 @@ import MainController from './controller/mainController';
 import HeaderController from './controller/headerController';
 import FooterController from './controller/footerController';
 import HttpService from './service/http.service';
+import AuthService from './service/auth.service';
 
 import routing from './app.config';
 import mockServer from './mock.server';
@@ -28,4 +29,5 @@ angular
     controllerAs: 'footer'
   })
   .service('httpService', HttpService)
+  .service('authService', AuthService)
   .run(mockServer);

@@ -1,3 +1,13 @@
 export default class HeaderController {
-  constructor() {}
+  constructor(authService) {
+    this.authService = authService;
+  }
+
+  isAuthed() {
+    return this.authService.authed();
+  }
+
+  getUserName() {
+    return this.authService.getUserName();
+  }
 }
