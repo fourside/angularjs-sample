@@ -9,6 +9,13 @@ import SecondTabController from './controller/secondTabController';
 import PeopleListController from './controller/peopleListController';
 import PeopleFormController from './controller/peopleFormController';
 import PaginationController from './controller/paginationController';
+import ContentHeaderController from './controller/contentHeaderController';
+import ModalController from './controller/modalController';
+
+import LoginController from './controller/loginController';
+import AboutController from './controller/aboutController';
+import ErrorController from './controller/errorController';
+import ChartController from './controller/chartController';
 
 import HttpService from './service/http.service';
 import AuthService from './service/auth.service';
@@ -22,28 +29,26 @@ angular
   .config(routing)
   .component('myMain', {
     template: require('../template/main.html'),
-    controller: MainController,
-    controllerAs: 'main'
+    controller: MainController
   })
   .component('myHeader', {
     template: require('../template/header.html'),
     controller: HeaderController,
-    controllerAs: 'header'
+    bindings: {
+      userName: '<'
+    }
   })
   .component('myFooter', {
     template: require('../template/footer.html'),
-    controller: FooterController,
-    controllerAs: 'footer'
+    controller: FooterController
   })
   .component('firstTab', {
     template: require('../template/firstTab.html'),
-    controller: FirstTabController,
-    controllerAs: 'firstTab'
+    controller: FirstTabController
   })
   .component('peopleList', {
     template: require('../template/peopleList.html'),
     controller: PeopleListController,
-    controllerAs: 'peopleList',
     bindings: {
       onEdit: '&'
     }
@@ -51,7 +56,6 @@ angular
   .component('peopleForm', {
     template: require('../template/peopleForm.html'),
     controller: PeopleFormController,
-    controllerAs: 'peopleForm',
     bindings: {
       person: '<',
       onList: '&'
@@ -60,15 +64,46 @@ angular
   .component('secondTab', {
     template: require('../template/secondTab.html'),
     controller: SecondTabController,
-    controllerAs: 'secondTab'
+  })
+  .component('headding', {
+    template: require('../template/contentHeader.html'),
+    controller: ContentHeaderController,
+    bindings: {
+      title: '<',
+      callback: '<'
+    }
   })
   .component('pagination', {
     template: require('../template/pagination.html'),
     controller: PaginationController,
-    controllerAs: 'pagination',
     bindings: {
       totalItems: '<',
       onChange: '&'
+    }
+  })
+  .component('login', {
+    template: require('../template/login.html'),
+    controller: LoginController
+  })
+  .component('about', {
+    template: require('../template/about.html'),
+    controller: AboutController
+  })
+  .component('chart', {
+    template: require('../template/chart.html'),
+    controller: ChartController
+  })
+  .component('error', {
+    template: require('../template/error.html'),
+    controller: ErrorController
+  })
+  .component('modal', {
+    template: require('../template/modal.html'),
+    controller: ModalController,
+    bindings: {
+      resolve: '<',
+      close: '&',
+      dismiss: '&'
     }
   })
   .constant('appConst', appConst())
