@@ -1,3 +1,5 @@
 export default class ErrorController {
-  constructor() {}
+  constructor($scope) {
+    $scope.$emit('viewChanged', 'Error!');
+  }
 }

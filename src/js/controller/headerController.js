@@ -1,13 +1,27 @@
+
 export default class HeaderController {
-  constructor(authService) {
-    this.authService = authService;
+  constructor($uibModal) {
+    this.uibModal = $uibModal;
+    this.userName;
+    this.modalInstance;
   }
 
-  isAuthed() {
-    return this.authService.authed();
-  }
-
-  getUserName() {
-    return this.authService.getUserName();
+  openModal() {
+    this.uibModal.open({
+      component: 'modal',
+      size: 'lg',
+      resolve: {
+        userName: () => {
+          return this.userName;
+        }
+      }
+    }).result.then(
+      (message) => {
+        console.log('result!', message);
+      },
+      (dismiss) => {
+        console.log('dismiss', dismiss);
+      }
+    );
   }
 }

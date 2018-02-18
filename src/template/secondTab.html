@@ -1,8 +1,8 @@
 <h3>Second Tab</h3>
-name: <input ng-model="secondTab.name">
-<p>name: {{secondTab.name}}</p>
+name: <input ng-model="$ctrl.name">
+<p>name: {{$ctrl.name}}</p>
 
-<ul ng-repeat="state in secondTab.stateList">
+<ul ng-repeat="state in $ctrl.stateList">
   <li>{{state}}</li>
 </ul>
-<pagination on-change="secondTab.get(index)" total-items="secondTab.states.length"></pagination>
+<pagination on-change="$ctrl.get(index)" total-items="$ctrl.states.length"></pagination>

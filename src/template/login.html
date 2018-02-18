@@ -2,15 +2,15 @@
   <h2>login</h2>
   <div class="form-group">
     <label for="mail">Mail</label>
-    <input class="form-control" type="email" name="mail" id="mail" ng-model="login.mail" required>
+    <input class="form-control" type="email" name="mail" id="mail" ng-model="$ctrl.mail" required>
     <span class="validation-error" ng-show="loginForm.mail.$error.email">please enter in email format.</span>
     <span class="validation-error" ng-show="loginForm.mail.$error.required && loginForm.mail.$dirty">please enter your email.</span>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input class="form-control" type="password" name="password" id="password" ng-model="login.password" required>
+    <input class="form-control" type="password" name="password" id="password" ng-model="$ctrl.password" required>
     <span class="validation-error" ng-show="loginForm.password.$error.required && loginForm.password.$dirty">please enter password.</span>
   </div>
-  <div uib-alert ng-class="'alert-' + login.alert.type" ng-if="login.alert">{{login.alert.msg}}</div>
-  <button type="submit" class="btn btn-primary" ng-disabled="!loginForm.$valid" ng-click="login.login()">login</button>
+  <div uib-alert ng-class="'alert-' + $ctrl.alert.type" ng-if="login.alert">{{$ctrl.alert.msg}}</div>
+  <button type="submit" class="btn btn-primary" ng-disabled="!loginForm.$valid" ng-click="$ctrl.login()">login</button>
 </form>

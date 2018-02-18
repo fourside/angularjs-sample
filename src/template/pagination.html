@@ -1,11 +1,11 @@
-<ul uib-pagination 
+<ul uib-pagination
   class="pagination-sm"
   boundary-links="true"
   direction-links="false"
-  ng-model="pagination.currentPage"
-  total-items="pagination.totalItems"
-  max-size="pagination.maxSize"
-  items-per-page="pagination.perPage"
-  ng-change="pagination.change()"
+  ng-model="$ctrl.currentPage"
+  total-items="$ctrl.totalItems"
+  max-size="$ctrl.maxSize"
+  items-per-page="$ctrl.perPage"
+  ng-change="$ctrl.change()"
 >
 </ul>

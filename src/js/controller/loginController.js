@@ -1,11 +1,12 @@
 export default class LoginController {
-  constructor(httpService, authService, $location) {
+  constructor($scope, httpService, authService, $location) {
     this.mail;
     this.password;
     this.alert;
     this.httpService = httpService;
     this.authService = authService;
     this.location = $location;
+    $scope.$emit('viewChanged');
   }
 
   login() {

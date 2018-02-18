@@ -51,3 +51,8 @@ footer {
 .th-icon {
     width: 30px;
 }
+.chart-container {
+    position: relative;
+    height: 20vh;
+    width: 30vw;
+}

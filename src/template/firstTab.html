@@ -1,5 +1,5 @@
 <h3>First Tab</h3>
-<div ng-switch="firstTab.editMode">
-  <people-form ng-switch-when="true" on-list="firstTab.listMode()" person="firstTab.person"></people-form>
-  <people-list ng-switch-default on-edit="firstTab.edit(person)"></people-list>
+<div ng-switch="$ctrl.editMode">
+  <people-form ng-switch-when="true" on-list="$ctrl.listMode()" person="$ctrl.person"></people-form>
+  <people-list ng-switch-default on-edit="$ctrl.edit(person)"></people-list>
 </div>

@@ -8,6 +8,6 @@ export default class PaginationController {
   }
 
   change() {
-    this.onChange({index: this.currentPage - 1});
+    this.onChange({ index: this.currentPage - 1 });
   }
 }

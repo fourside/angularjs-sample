@@ -1,6 +1,6 @@
 <h4>People List</h4>
 
-<p><a href ng-click="peopleList.register()">register person</a></p>
+<p><a href ng-click="$ctrl.register()">register person</a></p>
 
 <table class="table table-bordered">
   <thead>
@@ -13,12 +13,12 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="person in peopleList.people">
-      <td><a href="" ng-click="peopleList.edit(person)"><i class="glyphicon glyphicon-pencil"></i></a></td>
+    <tr ng-repeat="person in $ctrl.people">
+      <td><a href="" ng-click="$ctrl.edit(person)"><i class="glyphicon glyphicon-pencil"></i></a></td>
       <td>{{person.id}}</td>
       <td>{{person.name}}</td>
       <td>{{person.hash}}</td>
-      <td><a href="" ng-click="peopleList.del(person)"><i class="glyphicon glyphicon-trash"></i></a></td>
+      <td><a href="" ng-click="$ctrl.del(person)"><i class="glyphicon glyphicon-trash"></i></a></td>
     </tr>
   </tbody>
 </table>

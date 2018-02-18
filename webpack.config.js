@@ -14,6 +14,7 @@ module.exports = {
       'angular-resource',
       'angular-ui-bootstrap',
       'angular-mocks',
+      'chart.js'
       //'angular-translate',
     ]
   },
