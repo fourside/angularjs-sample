@@ -9,6 +9,7 @@ export default class PeopleFormController {
         this.commit = this.create;
       }
     };
+    this.meal = {};
   }
 
   create() {
@@ -55,4 +56,11 @@ export default class PeopleFormController {
     this.person = undefined;
     this.onList();
   }
+  
+  any() {
+    return !Object.keys(this.meal).some((name) => {
+      return this.meal[name];
+    });
+  }
+
 }

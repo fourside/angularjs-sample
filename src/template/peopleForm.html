@@ -14,6 +14,19 @@
     <input class="form-control" type="text" name="hash" id="hash" ng-model="$ctrl.person.hash" required>
     <span class="validation-error" ng-show="form.hash.$error.required && form.hash.$dirty">please enter hash.</span>
   </div>
+  <div class="meal-choice form-group">
+    <h5>which do you like?</h5>
+    <label>
+      <input type="checkbox" name="meal" ng-model="$ctrl.meal.fish" ng-required="$ctrl.any()" > fish
+    </label>
+    <label>
+      <input type="checkbox" name="meal" ng-model="$ctrl.meal.pork" ng-required="$ctrl.any()"> pork
+    </label>
+    <label>
+      <input type="checkbox" name="meal" ng-model="$ctrl.meal.chiken" ng-required="$ctrl.any()"> chiken
+    </label>
+    <span class="validation-error" ng-show="form.meal.$error.required">please check one at least.</span>
+  </div>
   <div uib-alert ng-class="alert-danger" ng-if="$ctrl.alert">{{$ctrl.alert.msg}}</div>
   <button type="submit" class="btn btn-primary" ng-disabled="!form.$valid" ng-click="$ctrl.commit()">Commit</button>
   <button class="btn btn-primary" ng-click="$ctrl.back()">Back</button>
