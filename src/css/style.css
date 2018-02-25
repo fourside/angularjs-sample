@@ -34,6 +34,9 @@ footer {
     padding: 30px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background-image: url('../logo.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 .person-form {
     max-width: 80%;
@@ -41,6 +44,9 @@ footer {
     padding: 30px;
     border: 1px solid #ddd;
     border-radius: 5px;
+}
+.meal-choice label {
+    margin-right: 20px;
 }
 .login-form h2 {
     margin-top: 0;
