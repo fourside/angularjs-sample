@@ -11,4 +11,5 @@ export default function mockServer($httpBackend) {
     { id: 6, name: 'baz', hash: '750cb1fc70a0239e3a5b6efb443ececea89f6e72' }
   ];
   $httpBackend.whenGET('/api/people').respond(200, { people: people });
+  $httpBackend.whenPOST('/api/person').respond(201, {});
 }
